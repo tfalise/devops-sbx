@@ -7,7 +7,7 @@ trigger:
 - master
 
 stages:
-  - stage: Build Application
+  - stage: BuildApplication
     pool:
       vmImage: 'windows-2022'
     variables:
@@ -15,7 +15,7 @@ stages:
       buildPlatform: 'Any CPU'
       buildConfiguration: 'Release'
     jobs:
-      - job: Build & Test
+      - job: Build_And_Test
         steps:
         - task: NuGetToolInstaller@1
 
